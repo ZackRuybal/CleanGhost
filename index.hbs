@@ -1,0 +1,14 @@
+{{!< default}}
+<header class="site-header">
+    <div class="inner">
+        {{> "nav"}}
+    </div>
+</header>
+
+<main role="main">
+    <div class="post-feed">
+        {{#foreach posts}}
+            {{> "frontpost"}}
+        {{/foreach}}
+    </div>
+</main>

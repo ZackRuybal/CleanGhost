@@ -1,0 +1,50 @@
+{{!< default}}
+<header class="site-header">
+    <div class="inner">
+        {{> "nav"}}
+    </div>
+</header>
+
+{{#post}}
+
+<main role="main">
+    <article class="post-full">
+        <header class="postfull-header">
+            <section class="postfull-meta">
+                <time class="postfull-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+                {{#primary_tag}}
+                    <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
+                {{/primary_tag}}
+            </section>
+            <h1 class="postfull-title">{{title}}</h1>
+        </header>
+
+        <section class="postfull-content">
+            {{content}}
+        </section>
+
+        <footer class="postfull-footer">
+            {{#author}}
+            <section class="author-card">
+            {{#if profile_image}}
+            <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
+            {{/if}}
+            <section class="author-card-content">
+                    <h4 class="author-card-name"><a href="{{url}}">{{name}}</a></h4>
+                    {{#if bio}}
+                    <p>{{bio}}</p>
+                    {{else}}
+                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+            {{/if}}
+                </section>
+            </section>
+            <div class="post-full-footer-right">
+                <a class="author-card-button" href="{{url}}">Read More</a>
+            </div>
+
+            {{/author}}
+        </footer>
+
+    </article>
+</main>
+{{/post}}
