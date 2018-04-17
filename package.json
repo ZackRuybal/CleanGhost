@@ -12,6 +12,10 @@
         "email": "redacted@nope.spam",
         "url": "https://zruybal.com"
     },
+    "scripts": {
+        "dev": "gulp",
+        "zip": "gulp zip"
+    },
     "gpm": {
         "type": "theme",
         "categories": [
