@@ -856,6 +856,12 @@ body {
     color: rgba(255,255,255,1);
     text-decoration: none;
 }
+.footer > section.copyright a {
+    margin-left: -1px;
+}
+.footer > section.copyright a:before {
+    display: none;
+}
 .footer {
     display: flex;
     justify-content: space-between;
@@ -871,7 +877,7 @@ body {
 .footer a:before {
     content: "";
     position: absolute;
-    top: 11px;
+    top: 8px;
     left: -11px;
     display: block;
     width: 2px;
